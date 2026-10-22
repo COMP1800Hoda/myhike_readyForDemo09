@@ -27,7 +27,7 @@
         <h1>Add a new hike</h1>
         <div id="formAlert" class="alert alert-danger d-none" role="alert"></div>
 
-        <form id="addHikeForm" novalidate>
+        <form id="addHikeForm" onsubmit="saveHike(event)" novalidate>
             <div class="mb-3">
                 <label for="hikeNameInput" class="form-label">Hike name</label>
                 <input type="text" id="hikeNameInput" class="form-control" placeholder="e.g. Lynn Loop" required />
