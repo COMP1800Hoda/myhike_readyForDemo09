@@ -97,13 +97,13 @@ async function displayHikesDynamically() {
         let newcard = cartTemplate.content.cloneNode(true);
 
         //read this hike in the loop
-        const thisHike = doc.data();
+        const hike = doc.data();
 
         //populate data in the template
-        newcard.querySelector('.card-title').textContent = thisHike.name;
-        newcard.querySelector('.card-text').textContent = thisHike.details || `Located in ${hike.city}.`;
-        newcard.querySelector('.card-length').textContent = thisHike.length;
-        newcard.querySelector('.card-image').src = `./images/${thisHike.code}.jpg`;
+        newcard.querySelector('.card-title').textContent = hike.name;
+        newcard.querySelector('.card-text').textContent = hike.details || `Located in ${hike.city}.`;
+        newcard.querySelector('.card-length').textContent = hike.length;
+        newcard.querySelector('.card-image').src = `./images/${hike.code}.jpg`;
         newcard.querySelector(".read-more").href = `eachHike.html?docID=${doc.id}`;
 
         // attach the template to the fron-end
